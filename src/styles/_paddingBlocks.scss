@@ -1,0 +1,14 @@
+@use "src/styles/media";
+
+@mixin padding() {
+  padding: 20px 16px;
+  @include media.tp {
+   padding: 28px 20px;
+  }
+  @include media.d() {
+    padding: 32px 24px;
+  }
+  @include media.dhd {
+    padding: 36px 28px;
+  }
+}

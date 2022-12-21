@@ -1,0 +1,430 @@
+@use "src/styles/grid";
+@use "src/styles/media";
+@use "src/styles/marginBlocks";
+@use "src/styles/color";
+@use "src/styles/brBlocks";
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include grid.All;
+  @include marginBlocks.mb;
+  @include brBlocks.borderRadius();
+}
+
+.section {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 35px 10px 35px 14px;
+  border-radius: 20px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  background: color.$white;
+  position: relative;
+  @include media.ml {
+    padding: 35px 40px 51px 40px;
+  }
+  @include media.tp {
+    padding: 60px 126px 93px 120px;
+  }
+  @include media.d {
+    padding: 60px 47px 148px 100px;
+  }
+  @include media.ds {
+    padding: 60px 116px 60px 116px;
+  }
+  @include media.dhd {
+    padding: 76px 120px 71px 156px;
+  }
+}
+
+.section__title {
+  font-family: "SangBleu Kingdom", serif;
+  font-weight: 700;
+  width: 100%;
+  font-size: 28px;
+  line-height: 39px;
+  text-align: center;
+  max-width: 260px;
+  max-height: 117px;
+  color: color.$grayscale1000;
+  margin-bottom: 32px;
+  @include media.tp {
+    font-size: 38px;
+    line-height: 51px;
+    max-width: 712px;
+  }
+  @include media.d {
+    max-width: 1152px;
+    font-size: 51px;
+    line-height: 66px;
+    margin-bottom: 88px;
+  }
+  @include media.dhd {
+    max-width: 1848px;
+    font-size: 67px;
+    line-height: 83px;
+    margin-bottom: 53px;
+  }
+}
+
+.section__steps {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 6px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.accordion {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.accordion ::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 0;
+  height: calc(100% - 10%);
+  width: 4px;
+  background: color.$brand700;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  opacity: 0;
+  @include media.ml {
+    left: -46px;
+  }
+}
+
+.accordion.stepLine ::before {
+  opacity: 1;
+  animation: anim 0.5s;
+}
+
+.stepLine {
+  @include media.tp {
+    position: relative;
+    transition: 1s all;
+  }
+}
+
+.stepLine ::before {
+  @include media.tp {
+    left: -125px;
+    top: 0;
+    height: calc(100% - 15%);
+    width: 4px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  @include media.d {
+    left: -106px;
+    top: 0;
+    height: calc(100% - 15%);
+    width: 4px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  @include media.ds {
+    left: -122px;
+  }
+  @include media.dhd {
+      left: -162px;
+      top: 0;
+      width: 8px;
+      border-top-right-radius: 10px;
+      background: #ff8300;
+      border-bottom-right-radius: 10px;
+      height: 80%;
+  }
+}
+
+@keyframes anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.imageTemplate {
+  display: none;
+  @include media.d {
+    display: block;
+    width: 573px;
+    animation: anim 0.5s;
+  }
+  @include media.dhd {
+    width: 791px;
+  }
+}
+
+.step__title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 20px;
+  width: 100%;
+  @include media.tp {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  @include media.d {
+    font-size: 31px;
+    line-height: 42px;
+    margin-bottom: 28px;
+  }
+  @include media.dhd {
+    margin-bottom: 16px;
+  }
+}
+
+.step__title:hover {
+  cursor: pointer;
+}
+
+.arrowUp {
+  width: 12px;
+  transition: transform 0.3s linear;
+  @include media.d {
+    display: none;
+  }
+}
+
+.line::before {
+  position: absolute;
+  left: 0;
+  transition: 1s all;
+  content: "";
+}
+
+.step__description {
+  max-width: 216px;
+  display: block;
+  margin-bottom: 20px;
+  @include media.ml {
+    max-width: 380px;
+  }
+  @include media.tp {
+    font-size: 13px;
+    line-height: 19px;
+    max-width: 416px;
+  }
+  @include media.d {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 416px;
+    margin-bottom: 49px;
+    animation: renderElement 1s;
+  }
+  @include media.dhd {
+    max-width: 460px;
+    margin-bottom: 52px;
+  }
+}
+
+.video {
+  @include media.d {
+    height: 270px;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-right: -45px;
+  }
+  @include media.ds {
+    width: 387px;
+    height: 300px;
+    margin-right: -35px;
+  }
+  @include media.dhd {
+    margin-right: -18px;
+    width: 510px;
+    height: 380px;
+  }
+}
+
+.signup__noneDescription {
+  display: none;
+}
+
+.step__titleViolet {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 20px;
+  color: color.$violet;
+  @include media.tp {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  @include media.d {
+    font-size: 31px;
+    line-height: 42px;
+    margin-bottom: 28px;
+  }
+  @include media.dhd {
+    margin-bottom: 16px;
+  }
+}
+
+.step__titleViolet:hover {
+  cursor: pointer;
+}
+
+.arrowDown {
+  stroke: color.$violet;
+  width: 12px;
+  transform: rotate(180deg);
+  transition: transform 0.3s linear;
+  @include media.d {
+    display: none;
+  }
+}
+
+.yellowFigure {
+  display: none;
+  @include media.d {
+    display: block;
+    z-index: 1;
+    position: absolute;
+    right: 48px;
+    bottom: 68px;
+    width: 108px;
+    transform: scale(0);
+    transition: 0.5s;
+    transition-delay: 0.2s;
+    transform-origin: bottom right;
+  }
+  @include media.dhd{
+    right: 48px;
+    bottom: 68px;
+    width: 156px;
+  }
+}
+
+.yellowFigure.yellowFigureAnimate {
+  @include media.d {
+    transform: scale(1);
+  }
+}
+
+.blueTriangle {
+  display: none;
+  @include media.d {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 33px;
+    transform: scale(0);
+    transition: 0.5s;
+    transition-delay: 0.3s;
+    transform-origin: bottom left;
+  }
+  @include media.dhd{
+    top: 30px;
+    left: 33px;
+    width: 145px;
+  }
+}
+
+.blueTriangle.blueTriangleAnimate {
+  @include media.d {
+    transform: scale(1);
+  }
+}
+
+.image {
+  display: none;
+  @include media.d {
+    display: block;
+    z-index: 0;
+    width: 100%;
+  }
+}
+
+.imageAnim {
+  @include media.d {
+    animation: renderElement 0.5s;
+  }
+}
+
+.lottie {
+  display: none;
+  @include media.d {
+    display: block;
+    max-width: 1000px;
+    width: 100%;
+  }
+}
+
+.chat {
+  display: none;
+  @include media.d {
+    max-width: 222px;
+    display: block;
+    width: 100%;
+    height: 270px;
+    margin-right: -25px;
+  }
+  @include media.ds {
+    max-width: 222px;
+    display: block;
+    width: 100%;
+    height: 300px;
+    margin-right: -21px;
+  }
+  @include media.dhd {
+    height: 380px;
+    margin-right: 25px;
+  }
+}
+
+.broadcastAnim {
+  display: none;
+  @include media.d {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 1145px;
+    height: 354px;
+    background: color.$grayscale100;
+    border-radius: 16px;
+  }
+  @include media.dhd {
+    width: 1598px;
+    height: 499px;
+    background: color.$grayscale100;
+    border-radius: 16px;
+    justify-content: flex-end;
+  }
+}
+
+@keyframes renderElement {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.line {
+  height: 160px;
+}
+

@@ -1,0 +1,120 @@
+@use "src/styles/media";
+@use "src/styles/color";
+
+.wrap {
+  position: relative;
+  @include media.tp{
+    border: 2px dashed color.$grayscale200;
+    border-radius: 26px;
+    padding: 32px 40px;
+  }
+}
+
+.wrap_border_mobile {
+  border: 2px solid color.$grayscale100;
+  border-radius: 16px;
+  padding: 20px 12px;
+  @include media.tp{
+    border-radius: 26px;
+    padding: 32px 40px;
+  }
+}
+
+.grid_date {
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include media.tp{
+    gap: 24px 8px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+
+.time_margin {
+  margin-bottom: 20px;
+  @include media.tp {
+    margin-bottom: 24px;
+  }
+}
+
+.select {
+  * button {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+.button_wrap {
+  width: 100%;
+  button {
+    width: 100%;
+  }
+  @include media.tp{
+    width: auto;
+    button {
+      width: 149px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.number_session {
+  margin-bottom: 28px;
+  text-align: center;
+  @include media.tp{
+    text-align: left;
+  }
+}
+
+.chevron_up {
+  position: absolute;
+  right: 14px;
+  top: 20px;
+  cursor: pointer;
+  @include media.tp{
+    text-align: left;
+    right: 38px;
+    top: 34px;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
+  @include media.tp{
+    margin-top: 28px;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.button_delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid_date__no_margin {
+  margin-bottom: 0;
+}
+
+.speaker_style {
+  margin-top: 20px;
+  @include media.tp {
+    margin-top: 0;
+  }
+  @include media.tp{
+    width: 192px;
+  }
+  @include media.ds{
+    width: 300px;
+  }
+}

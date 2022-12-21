@@ -1,0 +1,26 @@
+@use "src/styles/color";
+@use "src/styles/media";
+
+.wrap {
+  position: fixed;
+  bottom:0;
+  left:0;
+  z-index: 2;
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px 16px;
+  @include media.tp() {
+    padding: 16px 28px 16px;
+  }
+}
+
+.success {
+  background-color: color.$mint700;
+}
+
+.error {
+  background-color: color.$red700;  
+}

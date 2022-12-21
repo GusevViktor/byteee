@@ -1,0 +1,53 @@
+@use "src/styles/grid";
+@use "src/styles/color";
+@use "src/styles/media";
+
+.wrapper {
+  position: relative;
+  justify-content: stretch;
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  background: color.$grayscale100;
+  padding: 0 20px 20px 20px;
+  min-height: 100vh;
+  overflow-y: auto;
+  @include media.tp{
+    padding: 0 28px 20px 28px;
+  }
+  @include media.d{
+    overflow: visible;
+  }
+}
+.grid_wrap {
+  @include grid.wrap;
+  width: 100%;
+}
+.header_wrap {
+  @include grid.All;
+}
+.content {
+  position: relative;
+  @include grid.wrap;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 8px;
+}
+
+
+.button_open_chat {
+  position: fixed;
+  width: 58px;
+  height: 58px;
+  right: 26px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: color.$white;
+  box-shadow: 0px 0px 0.5px rgba(0, 0, 0, 0.35), 0px 5px 15px rgba(0, 0, 0, 0.15);
+  @include media.d {
+    display: none;
+  }
+}

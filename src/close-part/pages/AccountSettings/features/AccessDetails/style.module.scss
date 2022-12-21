@@ -1,0 +1,126 @@
+@use 'src/styles/color';
+@use 'src/styles/media';
+
+.wrap{
+  background: white;
+  border-radius: 26px;
+  margin-top: 16px;
+  @include media.tp{
+    margin-top: 24px;
+  }
+  @include media.d{
+    margin-top: unset;
+    padding: 40px 80px;
+  }
+  @include media.dhd{
+    padding: 48px 156px;
+  }
+}
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  @include media.d{
+    margin-bottom: 26px;
+    border-bottom: 1px solid color.$grayscale100;
+    padding-bottom: 26px;
+  }
+}
+.hr_top{
+  display: none;
+  @include media.d{
+    display: inline-block;
+    border: none;
+    margin: 0;
+    border-top: 1px solid color.$grayscale100;
+    width: 100%;
+  }
+}
+.content{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  @include media.tp{
+    gap: 40px;
+  }
+  @include media.d{
+    flex-direction: row;
+    margin-top: 32px;
+    align-items: unset;
+  }
+  @include media.dhd{
+    gap: 134px;
+  }
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.title {
+  display: none;
+  @include media.d{
+    display: block;
+  }
+}
+.section{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  @include media.tp{
+    gap: 16px;
+  }
+}
+.email{
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  @include media.d {
+    justify-content: flex-start;
+    gap: 12px;
+    align-items: center;
+  }
+}
+.hr_bottom {
+  border: none;
+  margin: 24px 0;
+  border-top: 1px solid color.$grayscale100;
+  width: 100%;
+}
+.deletion{
+display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.input{
+  margin: 16px 0;
+  width: 100%;
+}
+.input input{
+  width: 100%;
+  min-width: unset;
+}
+.fullwidth button {
+  width: 100%;
+  @include media.tp{
+    width: unset;
+  }
+}
+.changePassword{
+  display: flex;
+  flex-direction: column;
+  @include media.tp{
+    flex-direction: row;
+  }
+}
+.form_width {
+  width: 100%;
+}

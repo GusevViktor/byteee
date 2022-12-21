@@ -1,0 +1,130 @@
+@use "src/styles/grid";
+@use "src/styles/media";
+@use "src/styles/color";
+$TitleColor: color.$grayscale900;
+$BodyFont: "Inter", sans-serif;
+$TitleFont: "Bleu Kingdom", serif;
+$BodyColor: color.$grayscale1000;
+$TitleMargin: 40px 0;
+@include media.tp {
+  $TitleMargin: 36px 0 28px 0;
+}
+@include media.d {
+  $TitleMargin: 40px 0 32px 0;
+}
+@include media.dhd {
+  $TitleNargin: 48px 0 32px 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $BodyFont;
+  color: $BodyColor;
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  grid-area: auto / 1 / auto / 5;
+  @include media.tp() {
+    grid-area: auto / 2 / auto / 6;
+    background: color.$white;
+    padding: 36px 86px;
+    border-radius: 26px;
+    margin-top: 102px;
+    margin-bottom: 181px;
+  }
+  @include media.d() {
+    grid-area: auto / 5 / auto / 9;
+    padding: 40px 68px;
+    margin-bottom: 152px;
+    margin-top: 72px;
+  }
+}
+.separator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+button {
+  svg {
+    path {
+      stroke: color.$violet;
+    }
+  }
+}
+hr {
+  border: 1px solid color.$grayscale200;
+  width: 120px;
+  background: color.$grayscale200;
+}
+input {
+  ::placeholder {
+    color: color.$grayscale600;
+  }
+}
+.submitForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.container button {
+  width: 100%;
+  max-width: 280px;
+}
+.title {
+  margin: $TitleMargin;
+  @include media.d {
+    margin: 0;
+    margin-bottom: 32px;
+  }
+}
+.mb {
+  margin-bottom: 16px;
+}
+//.mt{
+//  margin-top: 16px;
+//}
+.agreement {
+  text-align: center;
+  margin-top: 24px;
+  max-width: 280px;
+}
+
+.google_button {
+  margin-bottom: 24px;
+}
+.check_inbox {
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  max-width: 300px;
+}
+.afterRegistration_title {
+  margin-top: 40px;
+  margin-bottom: 4px;
+}
+.password_types {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 32px;
+  margin-bottom: 48px;
+}
+.password_type {
+  display: flex;
+  text-align: start;
+  gap: 8px;
+}

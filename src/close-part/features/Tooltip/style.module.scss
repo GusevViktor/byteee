@@ -1,0 +1,26 @@
+.wrap {
+  position: relative;
+  cursor: pointer;
+  z-index: 3;
+  display: inline-block;
+}
+.wrap:hover .tooltip{
+  visibility: visible;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  visibility: hidden;
+}
+
+.tooltip__left {
+  right: 31px;
+  top: -38px;
+}
+
+.tooltip__right {
+  top: -38px;
+  left: 31px;
+}

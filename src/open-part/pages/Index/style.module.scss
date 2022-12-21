@@ -1,0 +1,22 @@
+@use "src/styles/media";
+@use "src/styles/grid";
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @include grid.All;
+  @include media.tl{
+    max-width: 968px;
+  }
+  @include media.d{
+    max-width: 1192px;
+  }
+  @include media.ds{
+    max-width: 1384px;
+  }
+  @include media.dhd{
+    max-width: 1864px;
+  }
+}

@@ -1,0 +1,66 @@
+@use "src/styles/grid";
+@use "src/styles/media";
+@use "src/styles/color";
+
+.grid_left {
+ grid-area: auto / 1 / auto / 5;
+ @include media.tp{
+  grid-area: auto / 1 / auto / 7;
+ }
+ @include media.tl{
+  grid-area: auto / 1 / auto / 13;
+ }
+ @include media.d{
+  grid-area: auto / 1 / auto / 3;
+ }
+}
+.grid_center {
+ grid-area: auto / 1 / auto / 5;
+ @include media.tp{
+  grid-area: auto / 1 / auto / 7;
+ }
+ @include media.tl{
+  grid-area: auto / 1 / auto / 13;
+ }
+ @include media.d{
+  grid-area: auto / 3 / auto / 10;
+ }
+}
+.grid_right {
+ display: none;
+ @include media.d {
+  display: block;
+  position: sticky;
+  top: 0;
+  align-self: start;
+  grid-area: auto / 10 / auto / 13;
+ }
+}
+
+.submit {
+ display: flex;
+ padding: 16px 20px;
+ background: white;
+ justify-content: flex-end;
+ position: sticky;
+ bottom: 0;
+ box-shadow: 0 4px 13px -5px rgba(189, 189, 189, 0.5);
+ filter:drop-shadow(0px 1px 1px rgba(242, 242, 242, 0.5));
+ @include media.tp{
+  position: unset;
+  padding: 0 28px 20px;
+  bottom: unset;
+  box-shadow: unset;
+  filter: unset;
+  background: color.$grayscale100;
+ }
+ @include media.d{
+  display: none;
+ }
+}
+.submit button{
+ width: 100%;
+ @include media.tp{
+  width: unset;
+ }
+}

@@ -1,0 +1,364 @@
+@use "src/styles/media";
+@use "src/styles/grid";
+@use "src/styles/color";
+@use "src/styles/size";
+
+@mixin AllGrid() {
+  grid-area: auto / 1 / auto / 5;
+  justify-items: start;
+  @include media.tp() {
+    grid-area: auto / 1 / auto / 7;
+  }
+  @include media.d() {
+    grid-area: auto / 1 / auto / 13;
+  }
+}
+
+@mixin TitleGrid() {
+  justify-items: start;
+  grid-area: auto / 1 / auto / 5;
+  @include media.tp() {
+    grid-area: auto / 1 / auto / 7;
+  }
+  @include media.d() {
+    grid-area: auto / 4 / auto / 10;
+  }
+}
+
+@mixin EpisodesGrid() {
+  grid-area: auto / 1 / auto / 5;
+  justify-items: start;
+  @include media.tp() {
+    grid-area: auto / 1 / auto / 7;
+  }
+  @include media.d() {
+    grid-area: auto / 2 / auto / 12;
+  }
+}
+
+@mixin InformationsGrid() {
+  grid-area: auto / 1 / auto / 5;
+  justify-items: start;
+  @include media.tp() {
+    grid-area: auto / 1 / auto / 7;
+  }
+  @include media.d() {
+    grid-area: auto / 3 / auto / 11;
+  }
+}
+
+@mixin ImageGrid() {
+  grid-area: auto / 1 / auto / 5;
+  @include media.tp() {
+    grid-area: auto / 1 / auto / 7;
+  }
+  @include media.d() {
+    grid-area: auto / 5 / auto / 9;
+  }
+}
+
+
+.title_block {
+  @include TitleGrid;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  @include media.tp() {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  @include media.ds {
+    margin-bottom: 32px;
+  }
+}
+
+.wrap {
+  width: 100%;
+  margin: 40px auto 0;
+  @include grid.All;
+  @include media.tp() {
+    margin: 52px auto 0;
+  }
+  @include media.ds {
+    margin: 56px auto 0
+  }
+  @include media.dhd {
+    margin: 60px auto 0
+  }
+}
+
+.inner {
+  margin: 0 auto;
+  @include size.widthAll;
+}
+
+.title_small {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 16px;
+  @include media.tp() {
+    width: auto;
+    text-align: center;
+  }
+  @include media.dhd {
+    margin-bottom: 28px;
+  }
+}
+
+.description {
+  text-align: left;
+  margin-bottom: 20px;
+  @include media.ml() {
+    margin-bottom: 40px;
+  }
+  @include media.tp() {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto 20px;
+    p {
+      display: inline;
+    }
+  }
+  @include media.ds() {
+    max-width: 736px;
+  }
+  @include media.dhd() {
+    margin-bottom: 28px;
+  }
+}
+
+.button {
+  margin: 20px 0 54px;
+  @include media.tp() {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 64px;
+  }
+  @include media.ds() {
+    margin: 20px 0 112px;
+  }
+  @include media.dhd() {
+    margin: 28px 0 112px;
+  }
+
+  button {
+    width: 100%;
+    cursor: pointer;
+
+    @include media.tp() {
+      width: auto;
+    }
+  }
+}
+
+.image {
+  display: block;
+  width: 256px;
+  height: 184px;
+  margin: 0 auto 72px;
+  @include media.tp() {
+    width: 450px;
+    height: 324px;
+    margin-bottom: 96px;
+  }
+  @include media.dhd() {
+    width: 550px;
+    height: 394px;
+    margin-bottom: 152px;
+  }
+}
+
+.informations_wrap {
+  @include InformationsGrid;
+}
+
+.informations_text {
+  text-align: left;
+  @include media.tp() {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 517px;
+    p {
+      display: inline;
+    }
+  }
+  @include media.tl() {
+    max-width: 776px;
+  }
+  @include media.d() {
+    max-width: 918px;
+    p {
+      display: block;
+    }
+  }
+  @include media.dhd() {
+    max-width: 754px;
+  }
+}
+
+.informations {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+  @include media.tp() {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+}
+
+.information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 8px 20px;
+  width: 100%;
+  background: color.$white;
+  border-radius: 16px;
+  @include media.tp() {
+    width: max-content;
+    padding: 12px 21px;
+  }
+}
+
+.information__margin {
+  margin: 8px 0 0;
+  @include media.tp() {
+    margin: 0 0 0 64px;
+  }
+}
+
+.stars {
+  display: flex;
+  margin-left: 17px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  height: 13px;
+  width: 13px;
+}
+
+.clock {
+  margin-right: 13px;
+}
+
+.star {
+  margin-right: 7px;
+}
+
+.start__fill > svg path {
+  fill: color.$brand400;
+}
+
+.video_wrap {
+  border-radius: 16px;
+  width: 248px;
+  height: 152px;
+  margin-bottom: 44px;
+  @include media.tp() {
+    width: 304px;
+    height: 186px;
+    margin-right: 60px;
+  }
+  @include media.d() {
+    width: 334px;
+    height: 204px;
+    margin: 0 126px 0 58px;
+  }
+}
+
+.episodes_inner {
+  display: flex;
+  flex-direction: column;
+  @include media.tp() {
+    flex-direction: row;
+  }
+}
+
+.list_title {
+  margin-bottom: 16px;
+  @include media.tp() {
+    margin-bottom: 12px;
+  }
+}
+
+.item {
+  position: relative;
+  width: auto;
+  text-align: left;
+  padding-left: 20px;
+  margin: 0;
+  @include media.tp() {
+    width: auto;
+    text-align: left;
+  }
+  @include media.d() {
+    width: auto;
+    text-align: left;
+  }
+  @include media.dhd() {
+    width: auto;
+    text-align: left;
+  }
+
+  ::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 8px;
+    width: 5px;
+    height: 5px;
+    background: color.$grayscale900;
+    border-radius: 50%;
+  }
+}
+
+.link_wrap {
+  margin-top: 21px;
+  @include media.tp() {
+    margin-top: 16px;
+  }
+  @include media.d() {
+    margin-top: 20px;
+  }
+}
+
+.episodes_wrap {
+  width: 100%;
+  margin: 20px auto 52px;
+  @include EpisodesGrid;
+  @include media.ml() {
+    margin-top: 60px;
+  }
+  @include media.tp() {
+    margin: 24px auto;
+  }
+  @include media.tl() {
+    margin-top: 40px;
+  }
+  @include media.ds() {
+    margin-bottom: 104px;
+  }
+  @include media.dhd() {
+    margin-top: 28px;
+    margin-bottom: 184px;
+  }
+  @include size.widthDesktop;
+}
+
+.episode {
+  margin-bottom: 8px;
+  > div > div  {
+    margin: 0 auto;
+    @include size.maxWidthMobile;
+    @include media.tl() {
+      width: 100%;
+    }
+  }
+}

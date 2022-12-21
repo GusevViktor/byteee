@@ -1,0 +1,32 @@
+
+@use "src/styles/grid";
+@use "src/styles/media";
+@use "src/styles/color";
+
+.wrap {
+  width: 100%;
+  background: color.$white;
+  border-radius: 20px;
+  text-align: center;
+  width: 100%;
+  table {
+    width: 100%;
+    border-collapse: collapse; 
+    background: color.$white;
+  }
+  tr:first-child {
+    border-bottom: none;
+  }
+  tr:last-child {
+    border-bottom: none;
+  }
+  tr {
+    border-bottom: 1px solid color.$grayscale100;
+  }
+  th {
+    padding-bottom: 16px;
+  }
+  td {
+    padding: 24px 16px 28px 0px;
+  }
+}

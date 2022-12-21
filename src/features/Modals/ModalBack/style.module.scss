@@ -1,0 +1,20 @@
+@use "src/styles/color";
+
+.wrap {
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.background {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: RGBA(117, 117, 117, 0.6);
+}

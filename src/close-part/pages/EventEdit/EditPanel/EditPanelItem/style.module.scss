@@ -1,0 +1,60 @@
+@use "src/styles/media";
+@use "src/styles/color";
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.wrap__open {
+  margin-bottom: 16px;
+  @include media.tp {
+    margin-bottom: 24px;
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.icon_style {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color.$mint500;
+  margin-right: 8px;
+  border-radius: 50%;
+  @include media.tp {
+    margin-right: 16px;
+  }
+}
+
+.icon_style__border {
+  border: 1px solid color.$mint500;
+  background: color.$white;
+}
+
+.separator {
+  margin: 16px 0;
+  height: 1px;
+  width: 100%;
+  background: color.$grayscale100;
+  @include media.tp {
+    margin: 24px 0;
+  }
+}
+
+.separator__open {
+  margin: 32px 0 16px;
+  height: 1px;
+  width: 100%;
+  background: color.$grayscale100;
+  @include media.tp {
+    margin: 40px 0 24px;
+  }
+}

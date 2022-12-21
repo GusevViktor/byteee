@@ -1,0 +1,67 @@
+@use "src/styles/media";
+@use "src/styles/color";
+
+.wrap {
+  background-color: color.$white;
+  border-radius: 20px;
+  padding: 20px 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  @include media.tp() {
+    padding: 36px 120px;
+  }
+  @include media.d() {
+    padding: 42px 116px;
+  }
+  @include media.dhd() {
+    padding: 48px 116px;
+    margin-bottom: 24px;
+  }
+}
+
+.text {
+  margin-bottom: 20px;
+  @include media.tp() {
+    margin-bottom: 28px;
+  }
+  h4 {
+    margin-bottom: 8px;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 40px;
+  @include media.tp() {
+    margin-bottom: 36px;
+  }
+  @include media.ds() {
+    flex-direction: row;
+  }
+}
+
+.submit {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.submit button {
+  width: 100%;
+  @include media.tp {
+    width: unset;
+  }
+}
+
+.buttonBack {
+  display: none;
+  @include media.tp {
+    display: flex;
+    position: absolute;
+    justify-content: flex-start;
+    height: unset;
+    top: 5px;
+    padding: 0;
+  }
+}

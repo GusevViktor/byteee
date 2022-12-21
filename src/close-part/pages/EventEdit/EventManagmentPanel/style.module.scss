@@ -1,0 +1,19 @@
+@use "src/styles/grid";
+@use "src/styles/media";
+@use "src/styles/color";
+
+.wrap {
+  background-color: color.$white;
+  display:flex;
+  border-radius: 20px;
+  @include media.d {
+    border-radius: 26px;
+  }
+}
+
+.openWrap {
+  padding: 28px 24px;
+}
+.closeWrap {
+  padding: 28px 40px;
+}

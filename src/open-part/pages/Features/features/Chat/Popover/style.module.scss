@@ -1,0 +1,86 @@
+@use 'src/styles/media';
+@use 'src/styles/color';
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: color.$white;
+  color: color.$grayscale900;
+  box-sizing: border-box;
+  padding: 12px;
+  @include media.tp {
+    padding: 12px 24px;
+  }
+  @include media.tl {
+    padding: 8px 16px;
+  }
+  @include media.d{
+    padding: 12px 24px;
+  }
+}
+
+.container.left {
+  border-radius: 2px 16px 16px 16px;
+}
+
+.container.right {
+  border-radius: 16px 2px 16px 16px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 12px;
+  font-family: 'Inter', sans-serif;
+}
+
+.name {
+  color: color.$violet;
+  font-size: 13px;
+  line-height: 19px;
+  margin-bottom: 4px;
+  @include media.tp{
+    font-size: 14px;
+    line-height: 20px;
+  }
+  @include media.tl{
+    font-size: 9px;
+    line-height: 13px;
+  }
+  @include media.d{
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.message {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: color.$grayscale900;
+  @include media.ml{
+    font-size: 13px;
+    line-height: 19px;
+  }
+  @include media.tp {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @include media.tl {
+    font-size: 11px;
+    line-height: 16px;
+  }
+  @include media.d {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

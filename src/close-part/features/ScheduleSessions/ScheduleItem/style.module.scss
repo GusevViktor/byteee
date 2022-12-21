@@ -1,0 +1,84 @@
+@use "src/styles/color";
+@use "src/styles/media";
+
+.wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: color.$white;
+  border: 2px solid color.$grayscale100;
+  border-radius: 16px;
+  padding: 14px 12px;
+  list-style-type: none;
+  margin-bottom: 8px;
+  cursor: pointer;
+  @include media.tp {
+    padding: 24px 40px 24px 28px;
+  }
+  @include media.ds {
+    padding: 24px 40px;
+  }
+}
+
+.wrap_form {
+  margin-bottom: 8px;
+}
+
+.arrow {
+  margin-left: 8px;
+  @include media.tp {
+    margin-left: 10px;
+  }
+}
+
+.left_side {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 24px - 8px);
+  @include media.tp {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.time {
+  display: flex;
+  flex-direction: row;
+  width: 74px;
+  @include media.tp {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+
+.name_style {
+  p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.number_session {
+  display: none;
+  @include media.tp {
+    display: block;
+    margin-bottom: 4px;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  @include media.tp {
+    margin-left: 20px;
+    width: 276px;
+  }
+  @include media.ds {
+    margin-left: 26px;
+    width: 460px;
+  }
+}

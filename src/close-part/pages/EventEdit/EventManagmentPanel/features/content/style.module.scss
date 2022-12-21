@@ -1,0 +1,11 @@
+@use "src/styles/grid";
+@use "src/styles/media";
+@use "src/styles/color";
+
+.wrap {
+  background-color: color.$white;
+  border-radius: 20px;
+  @include media.d {
+    border-radius: 26px;
+  }
+}

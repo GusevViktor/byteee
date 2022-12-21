@@ -1,0 +1,66 @@
+@use "src/styles/color";
+@use "src/styles/media";
+
+.wrap {
+  position: absolute;
+  width: calc(100% - 40px);
+  height: auto;
+  padding: 64px 20px;
+  left: 0;
+  top: 20%;
+  background: color.$white;
+  border-radius: 26px;
+  margin: 0 20px;
+  @include media.tp {
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 64px;
+    width: 583px;
+    height: 390px;
+  }
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.description {
+  margin-bottom: 24px;
+}
+
+.avatar_wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.avatar_text {
+  margin-left: 8px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  button {
+    width: auto;
+  }
+  @include media.tp {
+    button {
+      width: 224px;
+    }
+  }
+}
+
+.button_delete {
+  margin-left: 8px;
+}
+
+.close_x {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+}

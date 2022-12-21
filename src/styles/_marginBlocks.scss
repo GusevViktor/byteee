@@ -1,0 +1,29 @@
+@use "src/styles/media";
+
+@mixin mb() {
+  margin-bottom: 72px;
+  @include media.tp {
+    margin-bottom: 96px;
+  }
+  @include media.tl() {
+    margin-bottom: 144px;
+  }
+  @include media.dhd {
+    margin-bottom: 152px;
+  }
+}
+@mixin mt() {
+  margin-top: 72px;
+  @include media.tp {
+    margin-top: 96px;
+  }
+  @include media.tl() {
+    margin-top: 144px;
+  }
+  @include media.dhd {
+    margin-top: 152px;
+  }
+}
+@mixin mb_lastBlock() {
+  margin-bottom: 24px;
+}

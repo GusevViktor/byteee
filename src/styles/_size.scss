@@ -1,0 +1,59 @@
+@use "src/styles/media";
+
+@mixin maxWidthMobile() {
+  max-width: 280px;
+  @include media.ml() {
+    max-width: 440px;
+  }
+  @include media.tp() {
+    max-width: 712px;
+  }
+  @include media.tl() {
+    max-width: none;
+  }
+}
+
+@mixin widthMobile() {
+  width: 280px;
+  @include media.ml() {
+    width: 440px;
+  }
+  @include media.tp() {
+    width: 712px;
+  }
+}
+@mixin widthDesktop() {
+  @include media.tl() {
+    width: 968px;
+  }
+  @include media.d() {
+    width: 1188px;
+  }
+  @include media.ds {
+    width: 1152px;
+  }
+  @include media.dhd {
+    width: 1240px;
+  }
+}
+
+@mixin widthAll() {
+  @include widthMobile;
+  @include widthDesktop;
+}
+
+@mixin widthFooter() {
+  width: 100%;
+  @include media.tl {
+    width: 968px;
+  }
+  @include media.d() {
+    width: 1188px;
+  }
+  @include media.ds {
+    width: 1384px;
+  }
+  @include media.dhd {
+    width: 1864px;
+  }
+}

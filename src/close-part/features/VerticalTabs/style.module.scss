@@ -1,0 +1,91 @@
+@use 'src/styles/color';
+@use 'src/styles/media';
+
+.list{
+  margin: 0;
+  padding: 0;
+}
+
+.tabs {
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  @include media.d{
+    gap: 24px;
+    white-space:nowrap;
+  }
+}
+.tabs li {
+  list-style-type: none;
+}
+
+.tab {
+  cursor: pointer;
+  width: 100%;
+  text-align: start;
+  align-items: center;
+  display: flex;
+  align-self: stretch;
+  justify-content: space-between;
+}
+.label{
+  display: flex;
+  align-items: center;
+  @include media.d{
+    gap: 8px;
+  }
+}
+.indicator{
+  display: none;
+  @include media.d{
+    display: inline-block;
+    position: absolute;
+    width: 2px;
+    height: 40px;
+    background: color.$grayscale900;
+    left:0;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+  }
+}
+.arrow{
+  transform: rotate(180deg);
+  transition: transform 0.3s linear;
+  @include media.d{
+    display: none;
+  }
+}
+.arrowUp{
+  transition: transform 0.3s linear;
+  @include media.d{
+    display: none;
+  }
+}
+.hr_bottom {
+  border: none;
+  border-top: 1px solid color.$grayscale100;
+  width: 100%;
+  height: 0;
+  margin: {
+    top: 16px;
+    bottom: 16px;
+  }
+  @include media.tp{
+    margin: {
+      top: 24px;
+      bottom: 24px;
+    }
+  }
+  @include media.d{
+    display: none;
+  }
+}
+.wrap li:last-child .hr_bottom{
+  display: none;
+}
+.grey svg path {
+  stroke: color.$grayscale500 !important;
+}
+.black svg path {
+  stroke: color.$grayscale900 !important;
+}

@@ -1,0 +1,120 @@
+@use "src/styles/grid";
+@use "src/styles/media";
+@use "src/styles/brBlocks";
+.wrap {
+  display: grid;
+  margin: 20px 0;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 8px;
+  @include media.tp() {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  @include media.tl() {
+    grid-template-columns: repeat(9, 1fr);
+  }
+  @include media.ds{
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+.media{
+  width: 100%;
+  grid-area: auto / 1 / auto / 5;
+  @include media.tp{
+    grid-area: auto / 1 / auto / 7;
+  }
+  @include media.tl{
+    grid-area: auto / 1 / auto / 10;
+  }
+  @include media.ds{
+    grid-area: auto / 1 / auto / 9;
+  }
+  @include media.dhd{
+    grid-area: auto / 1 / auto / 10;
+  }
+}
+
+.media h1 {
+  margin-bottom: 20px;
+  @include media.ds{
+    margin-bottom: 24px;
+  }
+  @include media.dhd{
+    margin-bottom: 28px;
+  }
+}
+.ticket{
+  width: 100%;
+  grid-area: auto / 1 / auto / 5;
+  margin-bottom: 8px;
+  @include media.tp{
+    grid-area: auto / 1 / auto / 3;
+    margin-bottom: unset;
+  }
+  @include media.tl{
+    grid-area: auto / 1 / auto / 4;
+  }
+  @include media.ds{
+    grid-area: auto / 1 / auto / 3;
+  }
+}
+.content{
+  width: 100%;
+  grid-area: auto / 1 / auto / 5;
+  @include media.tp{
+    grid-area: auto / 3 / auto / 7;
+  }
+  @include media.tl{
+    grid-area: auto / 4 / auto / 10;
+  }
+  @include media.ds{
+    grid-area: auto / 3 / auto / 10;
+  }
+  @include media.dhd{
+    grid-area: auto / 3 / auto / 10;
+  }
+}
+.img {
+  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 2/1;
+  @include brBlocks.borderRadius();
+  margin-bottom: 16px;
+  @include media.tp {
+    aspect-ratio: 3/1;
+    margin-bottom: 20px;
+  }
+  @include media.ds {
+    margin-bottom: 24px;
+  }
+  @include media.dhd {
+    margin-bottom: 28px;
+  }
+}
+.submit {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 8px;
+  @include media.tp{
+    flex-direction: row;
+  }
+}
+
+.submit button {
+  width: 100%;
+  @include media.tp {
+    width: unset;
+  }
+}
+.buttonBack {
+  display: none;
+  @include media.tp {
+    display: flex;
+    position: absolute;
+    justify-content: flex-start;
+    height: unset;
+    top: 5px;
+    padding: 0;
+  }
+}

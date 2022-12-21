@@ -1,0 +1,81 @@
+@use "src/styles/media";
+@use "src/styles/color";
+
+.info {
+  margin-bottom: 24px;
+  @include media.tp() {
+    margin-bottom: 32px;
+  }
+}
+
+.description {
+  margin-bottom: 16px;
+}
+
+.select {
+  margin-bottom: 8px;
+  @include media.tp() {
+    flex-grow: 1;
+    margin: 0;
+    margin-right: 8px;
+  }
+}
+
+.buttons {
+  margin-bottom: 32px;
+  @include media.tp() {
+    display: flex;
+  }
+}
+
+.select {
+  button {
+    min-width: auto;
+    width: 100%;
+  };
+}
+
+.button_send {
+  button {
+    min-width: auto;
+    width: 100%;
+  };
+  @include media.tp() {
+    button {
+      width: 150px;
+      margin-left: 8px;
+    }
+  }
+  @include media.ds() {
+    button {
+      width: 225px;
+    }
+  }
+}
+
+.toggle_wrap {
+  display: flex;
+  margin-bottom: 32px;
+  @include media.tp() {
+    margin-bottom: 40px;
+  }
+  p {
+    margin-left: 12px;
+  }
+};
+
+.info_title {
+  margin-bottom: 8px;
+  display: flex;
+}
+
+.tooltip {
+  margin-left: 12px;
+  @include media.tp() {
+    display: none;
+  }
+}
+
+.schedule_text {
+  margin: 0 0 8px;
+}

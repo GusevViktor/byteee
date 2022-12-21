@@ -1,0 +1,37 @@
+@use "src/styles/media";
+@use "src/styles/color";
+
+.wrap{
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  width: 40px;
+  @include media.tp{
+    width: 56px;
+  }
+}
+.circleWrap{
+  border-radius: 50%;
+  border: 4px solid  white;
+  background: transparent;
+  padding: 8px;
+  @include media.tp{
+    padding: 16px;
+  }
+}
+.selectedStep{
+  border: 4px solid color.$mint500;
+}
+.selectedStep.circleWrap svg path {
+  stroke: color.$mint500;
+}
+.completedStep{
+  border: 4px solid color.$mint500;
+  background: color.$mint500;
+}
+.completedStep.circleWrap svg path {
+  stroke: white;
+}

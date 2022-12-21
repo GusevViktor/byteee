@@ -1,0 +1,75 @@
+@use "src/styles/color";
+@use "src/styles/media";
+
+
+.img img{
+  max-height: 140px;
+  width:100%;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+.title {
+  margin-bottom: 9.5px;
+}
+.date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 9.5px;
+}
+.status {
+  margin-bottom: 40px;
+}
+
+.icon {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 0;
+  cursor: pointer;
+  p {
+    padding-left: 14px;
+  }
+}
+.active {
+  background: color.$grayscale100;
+  margin-left:  -24px;
+  padding-left:  24px;
+  margin-right:  -24px;
+  padding-right:  24px;
+  p {
+    color: color.$grayscale900;
+  }
+}
+.rectangle {
+  position: absolute;
+  left: 0px;
+}
+.icons {
+  margin-bottom:16px;
+}
+.calendar_icon {
+  margin-right:10px;
+}
+.ellipse {
+  width:3px;
+  height: 3px;
+  background: color.$grayscale700;
+  border-radius: 50%;
+  margin: 0 7px;
+}
+
+.flat_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 340px;
+}
+.solid_button {
+  width:100%;
+  button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,153 @@
+@use "src/styles/color";
+@use "src/styles/media";
+
+
+.wrap {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  background: color.$white;
+  padding: 24px 20px;
+  overflow: hidden;
+  justify-content: flex-start;
+  cursor: pointer;
+  @include media.dhd {
+    padding: 22px 24px;
+  }
+  &:hover {
+    background: color.$grayscale100;
+  }
+  &:active {
+    background: color.$grayscale300;
+  }
+}
+
+.delete_button {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 19px;
+  top: 26px;
+  width: 170px;
+  height: 64px;
+  background: color.$white;
+  box-shadow: 0px 0px 0.5px rgba(0, 0, 0, 0.35), 0px 5px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+}
+
+.avatar {
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  margin-left: 12px;
+}
+
+.message_style {
+  cursor: pointer;
+  overflow: hidden;
+  width: 200px;
+  > p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.unread {
+  width: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color.$red600;
+  border-radius: 90px;
+  padding: 0px 6px;
+  min-width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  margin-left: auto;
+}
+
+.check {
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.time_style {
+  margin-left: 10px;
+}
+
+.warning {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: color.$yellow100;
+  padding: 4px 6px;
+  border-radius: 12px;
+  height: 20px;
+  overflow: hidden;
+  > p {
+    margin-left: 4px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.mute_button {
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.name_style {
+  display: flex;
+  overflow: hidden;
+  margin-right: 12px;
+  > p {
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 10fr 1fr; 
+  overflow: hidden;
+  gap: 4px;
+}
+
+.row_left_side {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.row_right_side {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

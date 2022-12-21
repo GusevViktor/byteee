@@ -1,0 +1,34 @@
+@use 'src/styles/color';
+
+.wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: color.$grayscale100;
+  padding: 0 28px 0;
+  width: 100%;
+}
+
+.inner {
+  margin-top: 24px;
+  background: color.$white;
+  border-radius: 26px;
+  overflow: hidden;
+  height: calc(100vh - 101px);
+  margin-bottom: 14px;
+  >div {
+    height: 100%;
+  }
+}
+
+.wrap_chat {
+ 
+}
+
+.triangle {
+  position: absolute;
+  width: 77px;
+  height: 38px;
+  top: 64px;
+  right: 100px;
+}

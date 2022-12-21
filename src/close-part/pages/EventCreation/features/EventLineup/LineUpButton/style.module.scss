@@ -1,0 +1,79 @@
+@use "src/styles/media";
+@use "src/styles/color";
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background-color: color.$grayscale100;
+  border: 1px solid color.$grayscale200;
+  padding: 20px 16px;
+  border-radius: 20px;
+  @include media.tp() {
+    padding: 40px 48px;
+  }
+}
+.wrap:hover {
+  background-color: color.$grayscale100;
+  border: 1px solid color.$grayscale400;
+}
+ .active {
+  background-color: color.$grayscale900;
+  h4 {
+    color: color.$white;
+  }
+  p {
+    color: color.$grayscale300;
+  }
+}
+.active:hover {
+  background-color: color.$grayscale1000;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h4 {
+    text-align: left;
+    margin-bottom: 8px;
+  }
+  p {
+    text-align: left;
+  }
+  @include media.d() {
+    display: block;
+  }
+}
+@media (min-width: 850px) and (max-width: 880px) {
+  .text {
+    min-height: 84px;
+  }
+}
+@media (min-width: 554px) and (max-width: 584px) {
+  .text {
+    min-height: 84px;
+  }
+}
+@media (min-width: 354px) and (max-width: 377px) {
+  .text {
+    min-height: 108px;
+  }
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
+    @include media.tp() {
+      margin-right: 20px;
+  }
+
+}
+.icon img {
+  width: 40px;
+  margin: 0;
+}

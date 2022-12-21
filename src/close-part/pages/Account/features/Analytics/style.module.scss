@@ -1,0 +1,21 @@
+@use "src/styles/grid";
+@use "src/styles/media";
+@use "src/styles/color";
+
+.wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  @include media.tp() {
+    flex-direction:row;
+  }
+}

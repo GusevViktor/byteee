@@ -1,0 +1,382 @@
+@use "src/styles/grid";
+@use "src/styles/media";
+@use "src/styles/marginBlocks";
+@use "src/styles/color";
+@use "src/styles/brBlocks";
+
+
+.container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  padding: 32px 16px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: start;
+  background: color.$white;
+  color: color.$grayscale900;
+  box-sizing: border-box;
+  grid-area: auto / 1 / auto / 5;
+  @include brBlocks.borderRadius();
+  @include marginBlocks.mb_lastBlock;
+  @include marginBlocks.mt;
+  @include grid.All;
+  @include media.ml {
+    padding: 32px 18px 45px 36px;
+  }
+  @include media.tp {
+    grid-area: auto / 1 / auto / 7;
+    padding: 58px;
+  }
+  @include media.tl {
+    flex-direction: row;
+    grid-area: auto / 1 / auto / 13;
+    align-items: center;
+    justify-content: space-between;
+    padding: 48px 96px;
+  }
+  @include media.d {
+    grid-area: auto / 1 / auto / 13;
+    padding: 48px 120px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @include media.dhd {
+    padding: 76px 155px;
+    grid-area: auto / 2 / auto / 12;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  padding: 24px 16px;
+  background: color.$white;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.paragraph {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  @include media.ml {
+    flex-direction: column;
+    align-items: center;
+  }
+  @include media.tp {
+    flex-direction: row;
+    align-items: center;
+  }
+  @include media.tl {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.complexity {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 8px 20px;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: color.$grayscale600;
+  background: color.$white;
+  box-shadow: 0px 4px 13px -5px rgba(189, 189, 189, 0.5),
+  0px 1px 1px rgba(242, 242, 242, 0.5);
+  border-radius: 16px;
+  justify-content: space-between;
+  max-width: 227px;
+  @include media.tp {
+    margin-bottom: 8px;
+  }
+  @include media.d {
+    padding: 12px 20px;
+  }
+}
+
+.information__margin {
+  margin: 8px 0 0;
+}
+
+.stars {
+  display: flex;
+  margin-left: 17px;
+}
+
+.star {
+  margin-right: 7px;
+}
+
+.start__fill > svg {
+  fill: color.$brand400;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  height: 13px;
+  width: 13px;
+}
+
+.episode_section {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.episode_section:after {
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0.25deg, #ffffff 7.81%, rgba(255, 255, 255, 0) 67.69%);
+  @include media.d {
+    width: 80%;
+  }
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px 16px;
+  background: color.$white;
+  box-shadow: 0 4px 13px -5px rgba(189, 189, 189, 0.5),
+  0 1px 1px rgba(242, 242, 242, 0.5);
+  border-radius: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 280px;
+  margin-bottom: 10px;
+}
+
+.episode {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.episode_title {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  color: color.$grayscale900;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.status {
+  color: color.$mint700;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.4px 8.7px;
+  background: color.$mint100;
+  border-radius: 8.7px;
+  margin-left: 15px;
+}
+
+.video {
+  max-width: 248px;
+  margin-bottom: 48px;
+  @include media.ml {
+    max-width: 350px;
+    margin-bottom: 32px;
+  }
+  @include media.tp {
+    margin-bottom: 32px;
+    max-width: 430px;
+  }
+  @include media.tl {
+    max-width: 303px;
+  }
+  @include media.d {
+    max-width: 430px;
+  }
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @include media.tl {
+    justify-content: flex-start;
+  }
+  @include media.d {
+    align-items: start;
+  }
+}
+
+.block button {
+  width: 100%;
+  z-index: 1;
+  @include media.ml {
+    width: unset;
+  }
+}
+
+.section_one {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  @include media.ml {
+    max-width: 386px;
+  }
+  @include media.tp {
+    max-width: 600px;
+  }
+  @include media.tl {
+    width: 47%;
+  }
+  @include media.d {
+    width: 43%;
+  }
+  @include media.dhd {
+    width: 50%;
+  }
+}
+
+.section_two {
+  display: flex;
+  flex-direction: column;
+  @include media.ml {
+    max-width: 386px;
+  }
+  @include media.tp {
+    max-width: 600px;
+  }
+  @include media.tl {
+    width: 41%;
+  }
+  @include media.d {
+    width: 40%;
+  }
+  @include media.dhd {
+    width: 38%;
+  }
+}
+
+.video_section {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  @include media.tl {
+    flex-direction: column-reverse;
+  }
+}
+
+.mb {
+  margin-bottom: 24px;
+  @include media.tp {
+    margin-bottom: 56px;
+  }
+  @include media.tl {
+    margin-bottom: 24px;
+  }
+  @include media.d {
+    margin-bottom: 16px;
+  }
+  @include media.dhd {
+    margin-bottom: 28px;
+  }
+}
+
+.mb p {
+  margin-block-end: 0px;
+}
+
+.images_group {
+  width: 100%;
+  z-index: 0;
+  position: absolute;
+  bottom: 70px;
+  left: 0px;
+  @include media.tp {
+    bottom: -78px;
+    max-width: 816px;
+  }
+  @include media.tl {
+    max-width: 551px;
+    bottom: 41px;
+    right: 3%;
+    left: unset;
+  }
+  @include media.d {
+    bottom: -124px;
+    max-width: 816px;
+  }
+  @include media.dhd {
+    max-width: 880px;
+    bottom: -137px;
+  }
+}
+
+.block_complexity {
+  width: 100%;
+  justify-content: flex-start;
+  @include media.tp {
+    width: 80%;
+  }
+}
+
+
+
+
+.paragraph{
+  width: 100%;
+  max-width: 472px;
+  @include media.tl{
+    max-width: 806px;
+  }
+}
+.paragraph p:first-child{
+  margin-bottom: 24px;
+}
+
+.paragraph.center {
+  text-align: center;
+}
+
+.heading {
+  width: 100%;
+  margin-bottom: 16px;
+  @include media.tp{
+    font-size: 28px;
+    line-height: 39px;
+  }
+  @include media.d{
+    margin-bottom: 28px;
+    font-size: 38px;
+    line-height: 51px;
+  }
+  @include media.dhd{
+    font-size: 51px;
+    line-height: 66px;
+  }
+}

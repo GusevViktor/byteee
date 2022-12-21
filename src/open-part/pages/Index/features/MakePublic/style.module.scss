@@ -1,0 +1,168 @@
+@use "src/styles/grid";
+@use "src/styles/color";
+@use "src/styles/media";
+
+.container {
+  max-width: 1920px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 72px;
+  @include grid.All;
+}
+
+.section {
+  width: 100%;
+  max-height: 624px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  @include media.tp {
+    max-height: 1028px;
+  }
+  @include media.d {
+    flex-wrap: nowrap;
+    padding: 60px 143px 108px 144px;
+  }
+  @include media.dhd {
+    padding: 76px 120px 108px 156px;
+  }
+}
+
+.section__text {
+  box-sizing: border-box;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+  @include media.d {
+    align-items: flex-start;
+    margin-right: 14px;
+  }
+}
+
+.section__title {
+  font-family: "SangBleu Kingdom", serif;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  max-height: 78px;
+  margin-bottom: 25px;
+  @include media.tp {
+    max-width: 653px;
+    max-height: 66px;
+  }
+  @include media.d {
+    text-align: start;
+    justify-content: start;
+    align-items: start;
+    max-width: 653px;
+    display: none;
+  }
+  @include media.dhd {
+    margin-bottom: 34px;
+  }
+}
+
+.section__title.titleAnimate {
+  @include media.d {
+    display: block;
+    animation: renderText 0.4s;
+    position: relative;
+  }
+}
+
+.section__description {
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+  margin-bottom: 32px;
+  box-sizing: border-box;
+  @include media.tp {
+    max-width: 545px;
+    max-height: 150px;
+  }
+  @include media.d {
+    text-align: start;
+    justify-content: start;
+    align-items: start;
+    width: 545px;
+    display: none;
+  }
+  @include media.dhd {
+    text-align: start;
+    justify-content: start;
+    align-items: start;
+    width: 545px;
+    margin-bottom: 61px;
+  }
+}
+
+.section__description.descriptionAnimate {
+  @include media.d {
+    display: block;
+    animation: renderText 0.4s;
+    position: relative;
+  }
+}
+
+.section__button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 48px;
+  @include media.d {
+    justify-content: start;
+    display: none;
+  }
+  @include media.dhd {
+    justify-content: start;
+  }
+}
+
+.section__button.buttonAnimate {
+  @include media.d {
+    display: block;
+    position: relative;
+    animation: renderText 0.4s;
+  }
+}
+
+.mockup {
+  max-width: 280px;
+  width: 100%;
+  @include media.ml {
+    max-width: 330px;
+  }
+  @include media.tp {
+    width: 591px;
+    max-width: unset;
+    margin-left: 10px;
+  }
+  @include media.d {
+    width: 432px;
+  }
+  @include media.ds {
+    width: 591px;
+  }
+  @include media.dhd{
+    width: 771px;
+  }
+}
+
+@keyframes renderText {
+  from {
+    left: -5%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}

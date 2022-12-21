@@ -1,0 +1,42 @@
+@use "src/styles/color";
+@use "src/styles/media";
+
+.wrap {
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  bottom: 8px;
+  z-index: 20;
+  @include media.tp{
+    transform: translate(-50%, -50%);
+    bottom: unset;
+    left: 50%;
+    top: 50%;
+  }
+}
+
+.background {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: RGBA(15, 15, 15, 0.6);
+}
+
+.children_wrap {
+  position: absolute;
+  width: 100%;
+  padding: 0 8px;
+  bottom: 8px;
+  left: 0;
+  z-index: 21;
+  @include media.tp{
+    transform: translate(-50%, -50%);
+    bottom: unset;
+    left: 50%;
+    top: 50%;
+  }
+}

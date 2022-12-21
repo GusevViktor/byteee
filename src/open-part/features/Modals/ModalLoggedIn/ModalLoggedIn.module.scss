@@ -1,0 +1,74 @@
+@use "src/styles/color";
+
+.wrap {
+  width: 100%;
+  background: color.$grayscale100;
+  z-index: 21;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 15px;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 49px;
+  text-align: center;
+}
+
+.item {
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout_button {
+  margin-left: 16px;
+}
+
+.gray_text {
+  color: color.$grayscale600;
+}
+
+.icon_wrap {
+  svg path {
+    stroke: color.$grayscale700;
+  }
+}
+
+.description {
+  text-align: center;
+  padding: 20px 0 32px;
+}
+
+.text {
+  color: color.$grayscale600;
+}
+
+.text_margin {
+  margin-bottom: 6px;
+}
+
+.email {
+  margin-bottom: 16px;
+}
+
+.company {
+  margin-bottom: 6px;
+}
+
+.line {
+  height: 1px;
+  background: color.$grayscale200;
+  width: 100%;
+  margin: 36px 0 20px;
+}

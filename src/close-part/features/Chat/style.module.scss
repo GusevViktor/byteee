@@ -1,0 +1,133 @@
+@use "src/styles/color";
+@use "src/styles/media";
+
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 20px 24px;
+  cursor: pointer;
+  border-bottom: 1px solid color.$grayscale200;
+}
+
+.header_mobile {
+  padding: 28px 20px 4px;
+  border-bottom: none;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px 12px;
+}
+
+.search_input {
+  width: 100%;
+  > div {
+    width: 100%;
+  }
+  div input {
+    height: 52px;
+    width: 100%;
+    background: color.$grayscale100;
+    border: 1px solid transparent !important;
+    caret-color: color.$grayscale400;
+    &:active {
+      border: 1px solid transparent !important;
+    };
+    &:hover {
+      border: 1px solid transparent !important;
+    }
+  }
+  @include media.d {
+    div input {
+      height: 52px;
+      border: 1px solid transparent;
+      min-width: auto;
+      background: color.$grayscale100;
+    }
+  }
+  @include media.dhd {
+    div input {
+      height: 52px;
+      border: 1px solid transparent;
+      min-width: 360px;
+      background: color.$grayscale100;
+    }
+  }
+}
+
+.wrap {
+  width: 100%;
+  position: relative;
+  background: color.$white;
+  overflow: hidden;
+  height: 100vh;
+  @include media.d {
+    height: 100%;
+  }
+}
+
+.arrow {
+  position: absolute;
+  width: 116px;
+  height: 28px;
+  top: -23px;
+  right: 58px;
+}
+
+.chatList {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 141px);
+  overflow-y: scroll;
+  padding-right: 0;
+  box-sizing: content-box;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.chatList::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+
+.wrap_desktop {
+  height: 100%;
+  border-radius: 26px;
+}
+
+.wrap_shadow {
+  height: 80px;
+}
+
+.bell {
+  margin-left: 16px;
+}
+
+.arrow_icon {
+  cursor: pointer;
+}
+
+.arrow_icon__open {
+  transform: rotate(180deg);
+}
+
+
+.no_matches_texts {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  text-align: center;  
+  align-items: center;
+  justify-content: center;
+  max-width: 212px;
+}
+.no_matches_text {
+  margin-top: 14px;
+}

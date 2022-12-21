@@ -1,0 +1,103 @@
+@use "src/styles/media";
+
+.card{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 21px;
+  @include media.tp{
+    flex-direction: row;
+    gap: 19px;
+    align-items: stretch;
+  }
+}
+.media_wrap{
+  position: relative;
+  margin-bottom: 10px;
+  @include media.tp {
+    margin-bottom: unset;
+  }
+}
+.media, .media_wrap{
+  width: 100%;
+  @include media.tp{
+    width: 205px;
+    height: 128px;
+  }
+}
+.media{
+  object-fit: cover;
+  border-radius: 8px;
+}
+ .role{
+  display: flex;
+   align-items: center;
+  flex-direction: row;
+   flex-wrap: wrap;
+  gap: 8px;
+  flex-grow: 1;
+   @include media.tp{
+     gap: 20px;
+   }
+
+}
+.date{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex-grow: 1;
+  flex-direction: row;
+}
+.info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  gap: 8px;
+  @include media.tp{
+    margin-bottom: unset;
+    gap: 12px;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+.statusSection{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  @include media.tp{
+    height: 100%;
+    flex-direction: column-reverse;
+    align-items: end;
+  }
+}
+.content{
+  @include media.tp{
+    margin-top: 7px;
+  }
+  @include media.d{
+    max-width: 500px;
+    margin-top: unset;
+  }
+}
+.statusSection_wrap{
+  flex-grow: 1;
+  justify-content: space-between;
+}
+.title{
+  margin-bottom: 22px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  @include media.tp{
+    margin-bottom: 16px;
+  }
+}
+.bookmark{
+  position: absolute;
+  top: 9px;
+  left: 11px;
+}

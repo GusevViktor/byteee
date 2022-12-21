@@ -1,0 +1,45 @@
+@use "src/styles/media";
+.wrap{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.filterEvents{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include media.tp{
+    display: none;
+  }
+}
+.bookmark{
+    display: block;
+    flex-grow: 1;
+}
+.bookmark button{
+  padding: 0;
+  justify-content: start;
+}
+.tags {
+  @include media.tp {
+    display: flex;
+    gap: 8px;
+    flex-grow: 3;
+    justify-content: center;
+  }
+}
+.select {
+  @include media.tp {
+    display: block;
+    flex-grow: 1;
+  }
+}
+.select button{
+  min-width: unset;
+}
+.modal_filter{
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}

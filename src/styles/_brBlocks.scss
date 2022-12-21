@@ -1,0 +1,8 @@
+@use "src/styles/media";
+
+@mixin borderRadius() {
+  border-radius: 20px;
+  @include media.tp {
+   border-radius: 26px;
+  }
+}

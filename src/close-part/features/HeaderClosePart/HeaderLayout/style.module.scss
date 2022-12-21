@@ -1,0 +1,144 @@
+@use "src/styles/media";
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  background: #F5F5F5;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.iconButton {
+  display: flex;
+  cursor: pointer;
+}
+.buttonsSection {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  cursor: pointer;
+  justify-content: flex-end;
+  gap: 36px;
+}
+
+.button{
+  display: none;
+}
+.avatar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-grow: 1;
+  cursor: pointer;
+  justify-content: flex-end;
+  gap: 6px;
+}
+.avatarCp{
+  gap: 6px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.nav {
+  display: none;
+}
+.menu {
+  display: none;
+}
+.exitEvent{
+  display: none;
+}
+
+.buttons {
+  flex-grow: 1;
+  justify-content:flex-end;
+  display:flex;
+}
+.logo svg{
+  height: 27px;
+  max-width: 93.5px;
+}
+.button {
+  display: none;
+}
+.exitIcon{
+  display: none;
+}
+.navTablet{
+  display: none;
+}
+.menuTablet{
+  display: flex;
+}
+.iconButtonTablet{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.buttonTablet {
+  display: none;
+}
+@media screen and (min-width: 768px){
+.header{
+  height: 80px;
+}
+  .iconButton {
+    align-items: center;
+    gap: 10px;
+  }
+  .exitIcon{
+    display: block;
+    cursor: pointer;
+  }
+  .logo svg{
+    max-width: 118px;
+    flex-grow: 1;
+    height: 34px;
+  }
+  .menu {
+    display: flex;
+  }
+
+}
+@media screen and (min-width: 1024px){
+  .nav {
+    display: flex;
+    width: 100%;
+    flex-grow: 2;
+    gap: 48px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .exitIcon{
+    display: none;
+  }
+  .button {
+    display: flex;
+  }
+  .exitEvent{
+    display: block;
+  }
+  .iconButton {
+    display: none;
+  }
+  .logo{
+    max-width: unset;
+    width: 100%;
+  }
+  .buttons{
+    width: 100%;
+  }
+  .menu {
+    display: none;
+  }
+}
+
+

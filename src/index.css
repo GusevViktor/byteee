@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "SangBleu Kingdom";
+  font-display: swap;
+  font-weight: 400;
+  src: url("./fonts/SangBleuKingdom/SangBleuKingdom-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "SangBleu Kingdom";
+  font-weight: 700;
+  font-display: swap;
+  src: url("./fonts/SangBleuKingdom/SangBleuKingdom-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/Inter/Inter-Regular.ttf") format("opentype");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  font-display: swap;
+  src: url("./fonts/Inter/Inter-Bold.ttf") format("opentype");
+}
+:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "SangBleu Kingdom",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#webpack-dev-server-client-overlay {
+  display: none !important;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}

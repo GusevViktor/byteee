@@ -1,0 +1,23 @@
+@use "src/styles/color";
+@use "src/styles/media";
+
+
+.wrap {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: color.$grayscale100;
+  border-radius: 50%;
+  &:hover {
+    background: color.$grayscale200;
+  }
+  &:active {
+    background: color.$grayscale300;
+  }
+}

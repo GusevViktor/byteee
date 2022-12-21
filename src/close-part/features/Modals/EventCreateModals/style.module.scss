@@ -1,0 +1,27 @@
+@use "src/styles/media";
+.modalWrap {
+  @include media.tp {
+    width: 470px;
+  }
+}
+
+.name_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  @include media.tp {
+    margin-bottom: 24px;
+  }
+}
+
+.description {
+  display: none;
+  @include media.tp {
+    display: block;
+    margin-bottom: 24px;
+  }
+}
+
+.name_style {
+  margin-left: 8px;
+}

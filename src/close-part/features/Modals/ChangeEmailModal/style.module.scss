@@ -1,0 +1,30 @@
+@use 'src/styles/media';
+
+.title {
+  margin-bottom: 8px;
+  @include media.tp {
+    margin-bottom: 20px;
+  }
+}
+
+.input {
+  margin: {
+    top: 24px;
+    bottom: 16px;
+  }
+}
+
+.input input {
+  min-width: unset;
+}
+.submit button{
+  width: 100%;
+}
+.editButton button{
+  padding: 0;
+  min-width: unset;
+  justify-content: flex-end;
+  @include media.d{
+    justify-content: flex-start;
+  }
+}

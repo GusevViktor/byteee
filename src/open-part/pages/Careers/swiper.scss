@@ -1,0 +1,14 @@
+@use "src/styles/color";
+
+.swiper-pagination > .swiper-pagination-bullet {
+  background: color.$violet !important;
+  opacity: 1;
+  margin: 0;
+}
+.swiper-pagination-bullet {
+  margin: 0 !important;
+  margin-right: 4px !important;
+}
+.swiper-pagination > .swiper-pagination-bullet-active {
+  background: color.$violet200 !important;
+}

@@ -1,0 +1,77 @@
+@use "src/styles/grid";
+@use "src/styles/media";
+@use "src/styles/color";
+
+.panel {
+  display: none;
+  @include media.d{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+.openPanel {
+  @include media.d{
+    grid-column: 1/4;
+  }
+}
+
+.closePanel {
+  grid-column: 1/-1;
+  @include media.d{
+    grid-column: 1/1;
+  }
+}
+.content {
+  @include grid.All;
+  @include media.d {
+    grid-column: span 6;
+  }
+}
+
+.button_wrap {
+  @include grid.All;
+  margin-bottom: 8px;
+  button {
+    width: 100%;
+  }
+  @include media.d {
+    display: none;
+  }
+}
+
+.mobile_media {
+  width: 100%;
+  grid-area: auto / 1 / auto / 5;
+  @include media.tp {
+    grid-area: auto / 1 / auto / 7;
+  }
+  @include media.tl {
+    grid-area: auto / 1 / auto / 13;
+  }
+}
+.manage_event {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: color.$white;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  @include media.ds {
+    grid-area: auto / 1 / auto / 4
+  }
+}
+
+.manage_event__icon {
+  margin-right: 8px;
+}
+
+.edit_panel {
+  @include media.ds {
+    grid-area: auto / 4 / auto / 10
+  }
+}

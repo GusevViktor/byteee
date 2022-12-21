@@ -1,0 +1,35 @@
+@use "src/styles/grid";
+@use "src/styles/color";
+
+.wrapper {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background: color.$grayscale100;
+  padding: 0 20px 20px 20px;
+  overflow: hidden;
+}
+.grid_wrap {
+  @include grid.wrap;
+  width: 100%;
+}
+.header_wrap {
+  @include grid.All;
+}
+.content {
+  position: relative;
+}
+.content__template {
+  @include grid.wrap;
+  max-width: 1920px;
+  justify-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 768px) {
+  .wrapper {
+    padding: 0 28px 28px 28px;
+  }
+}

@@ -1,0 +1,48 @@
+@use "src/styles/color";
+@use "src/styles/media";
+.wrap {
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    div svg path {
+      stroke: color.$grayscale400;
+    };
+    &:hover {
+      div svg path {
+        stroke: color.$grayscale600;
+      }
+    };
+    &:active {
+      div svg path {
+        stroke: color.$grayscale800;
+      }
+    };
+}
+
+.wrap_violet {
+  div svg path {
+    stroke: color.$violet600;
+  };
+  &:hover {
+    div svg path {
+      stroke: color.$violet800;
+    }
+  };
+  &:active {
+    div svg path {
+      stroke: color.$violet900
+    }
+  };
+}
+
+.amount{
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background:#CF3642FF;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

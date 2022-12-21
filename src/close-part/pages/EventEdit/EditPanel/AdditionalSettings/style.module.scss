@@ -1,0 +1,43 @@
+@use "src/styles/media";
+@use "src/styles/color";
+
+.block {
+  border: 2px solid color.$grayscale100;
+  border-radius: 20px;
+  padding: 16px 12px;
+  @include media.tp {
+    border-radius: 26px;
+    padding: 20px 40px;
+  }
+}
+
+.block_margin {
+  margin-bottom: 8px;
+}
+
+.title {
+  margin-bottom: 18px;
+  @include media.tp {
+    margin-bottom: 8px;
+  }
+}
+
+.checkbox_wrap {
+  display: flex;
+  flex-direction: column;
+  margin-top: 34px;
+  @include media.tp {
+    margin-top: 24px;
+  }
+}
+
+.checkbox {
+  margin-bottom: 28px;
+}
+
+.textarea {
+  margin-top: 30px;
+  @include media.tp {
+    margin-top: 20px;
+  }
+}

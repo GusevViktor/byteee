@@ -1,0 +1,85 @@
+@use 'src/styles/color';
+@use 'src/styles/media';
+
+.wrap{
+  background: white;
+  border-radius: 26px;
+  margin-top: 16px;
+  @include media.tp{
+    margin-top: 24px;
+  }
+  @include media.d{
+    padding: 40px 80px;
+    margin-top: unset;
+  }
+  @include media.dhd{
+    padding: 48px 156px;
+  }
+}
+.wrap input{
+  min-width: unset;
+}
+.title{
+  display: none;
+  @include media.d{
+    border-bottom: 1px solid color.$grayscale100;
+    padding-bottom: 20px;
+    margin-bottom: 26px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center
+  }
+}
+.wrap hr{
+  display: none;
+  @include media.d{
+    display: inline-block;
+    border: 0;
+    margin: 0;
+    border-top: 1px solid color.$grayscale100;
+    width: 100%;
+  }
+}
+.content{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  @include media.tp{
+    gap: 40px;
+  }
+  @include media.d{
+    flex-direction: row;
+    margin-top: 32px;
+    align-items: unset;
+  }
+  @include media.dhd{
+    gap: 134px;
+  }
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  margin-bottom: 16px;
+  @include media.tp{
+    margin-bottom: 28px;
+  }
+  @include media.d{
+    margin-bottom: unset;
+  }
+}
+.title button{
+  display: none;
+  @include media.d{
+    display: block;
+  }
+}
+
+.form_width {
+  width: 100%;
+}

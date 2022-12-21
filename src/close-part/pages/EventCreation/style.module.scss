@@ -1,0 +1,56 @@
+@use "src/styles/grid";
+@use "src/styles/media";
+
+.content {
+  grid-area: auto / 1 / auto / 5;
+  @include media.tp {
+    margin: 0 auto;
+    grid-area: auto;
+    grid-template-columns: auto;
+    width: 712px;
+    @include grid.All;
+  }
+  @include media.ds {
+    width: 920px;
+  }
+  @include media.dhd {
+    grid-area: auto / 4 / auto / 10;
+  }
+}
+.content.preview{
+  @include media.tl {
+    grid-area: auto / 2 / auto / 12;
+  }
+  @include media.d {
+    grid-area: auto / 3 / auto / 11;
+  }
+}
+
+.title {
+  text-align: center;
+  position: relative;
+  margin-bottom: 24px;
+  @include media.tp {
+    margin-bottom: 40px;
+  }
+}
+
+.buttonBack {
+  display: none;
+  @include media.tp {
+    display: flex;
+    position: absolute;
+    justify-content: flex-start;
+    height: unset;
+    top: 5px;
+    padding: 0;
+  }
+}
+
+.content_position {
+  @include media.tp{
+    position: unset;
+  }
+}
+
+

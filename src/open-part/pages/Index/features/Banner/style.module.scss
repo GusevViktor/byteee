@@ -1,0 +1,369 @@
+@use "src/styles/grid";
+@use "src/styles/color";
+@use "src/styles/media";
+@use "src/styles/marginBlocks";
+@use "src/styles/brBlocks";
+
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 36px 16px 20px 16px;
+  background: color.$grayscale900;
+  @include brBlocks.borderRadius();
+  @include marginBlocks.mb;
+  @include grid.All;
+  @include media.ml {
+    padding: 33px 25px 20px 25px;
+  }
+  @include media.tp {
+    padding: 56px 33px 53px 56px;
+  }
+  @include media.tl {
+    padding: 56px 51px 61px 77px;
+  }
+  @include media.d {
+    padding: 101px 100px 88px 100px;
+  }
+  @include media.ds {
+    padding: 101px 108px 120px 108px;
+  }
+  @include media.dhd {
+    padding: 98px 158px 88px 158px;
+  }
+}
+
+.section {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include media.tp {
+    position: relative;
+    justify-content: start;
+    align-items: start;
+    max-width: 618px;
+    @include media.tl {
+      max-width: 900px;
+    }
+    @include media.d {
+      max-width: 992px;
+    }
+    @include media.ds {
+      max-width: 1160px;
+    }
+    @include media.dhd {
+      max-width: 1550px;
+    }
+  }
+}
+
+.banner {
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.banner__title {
+  font-size: 38px;
+  box-sizing: border-box;
+  line-height: 51px;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  justify-content: center;
+  text-rendering: optimizeSpeed;
+  @include media.ml {
+    max-width: 390px;
+  }
+  @include media.tp {
+    text-align: start;
+    max-width: 324px;
+    justify-content: flex-start;
+  }
+  @include media.tl {
+    max-width: 403px;
+  }
+  @include media.d {
+    max-width: 604px;
+  }
+  @include media.ds {
+    max-width: 604px;
+    margin-bottom: 38px;
+    animation: renderText 0.4s;
+    position: relative;
+  }
+  @include media.dhd {
+    font-size: 90px;
+    line-height: 107px;
+    margin-bottom: 35px;
+  }
+}
+
+.banner__description {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  gap: 30px;
+  @include media.ml {
+    max-width: 390px;
+  }
+  @include media.tp {
+    text-align: start;
+    max-width: 264px;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-bottom: 44px;
+    font-size: 16px;
+    line-height: 24px;
+    animation: renderText 0.4s;
+    position: relative;
+  }
+  @include media.tl {
+    max-width: 403px;
+  }
+  @include media.d {
+    max-width: 556px;
+  }
+  @include media.ds {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 64px;
+  }
+  @include media.dhd {
+    max-width: 664px;
+    margin-bottom: 52px;
+  }
+}
+
+.banner__button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 29px;
+  @include media.tp {
+    justify-content: flex-start;
+    margin-bottom: 0;
+    position: relative;
+    animation: renderText 0.4s;
+    transform-origin: bottom left;
+  }
+  @include media.ds {
+    margin-bottom: unset;
+  }
+}
+
+.girl {
+  width: 100%;
+  max-width: 265px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include media.ml {
+    max-width: 320px;
+  }
+  @include media.tp {
+    justify-content: flex-start;
+    position: absolute;
+    max-width: 317px;
+    top: 160px;
+    right: 0;
+    @include media.tl {
+      max-width: 381px;
+      top: 190px;
+    }
+    @include media.ds {
+      justify-content: flex-start;
+      max-width: 531px;
+      top: 277px;
+      left: 55%;
+      animation: renderImageLeft 0.5s;
+    }
+    @include media.dhd {
+      right: 0;
+      left: unset;
+      top: 317px;
+      max-width: 634px;
+    }
+  }
+}
+
+.event,
+.orange,
+.blue,
+.white {
+  display: none;
+}
+
+.event {
+  @include media.tp {
+    justify-content: flex-start;
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 145px;
+    @include media.tl {
+      max-width: 187px;
+    }
+    @include media.d {
+      max-width: 180px;
+    }
+    @include media.ds {
+      justify-content: flex-start;
+      position: absolute;
+      max-width: 254px;
+      top: 0;
+      right: 0;
+      transition-delay: 0.2s;
+      animation: renderImageRight 0.6s;
+    }
+    @include media.dhd {
+      max-width: 302px;
+    }
+  }
+}
+
+.orange {
+  @include media.tp {
+    justify-content: flex-start;
+    position: absolute;
+    display: block;
+    top: 43px;
+    right: 37%;
+  }
+  @include media.tl {
+    width: 137px;
+    top: 49px;
+  }
+  @include media.d {
+    width: 132px;
+    right: 28%;
+  }
+  @include media.ds {
+    justify-content: flex-start;
+    position: absolute;
+    width: 186px;
+    top: 69px;
+    right: 34%;
+    transition-delay: 0.5s;
+    animation: renderImageRight 0.9s;
+  }
+  @include media.dhd {
+    top: 88px;
+    right: 31%;
+    width: 221px;
+  }
+}
+
+.blue {
+  @include media.tp {
+    justify-content: flex-start;
+    position: absolute;
+    display: block;
+    width: 70px;
+    top: 78px;
+    left: 64%;
+  }
+  @include media.tl {
+    width: 91px;
+    top: 93px
+  }
+  @include media.d {
+    width: 86px;
+    left: 73%;
+  }
+  @include media.ds {
+    justify-content: flex-start;
+    position: absolute;
+    width: 122px;
+    top: 133px;
+    left: 67%;
+    animation: renderImageLeft 0.8s;
+  }
+  @include media.dhd {
+    top: 161px;
+    left: 70%;
+    width: 145px;
+  }
+}
+
+.white {
+  @include media.tp {
+    justify-content: flex-start;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 64%;
+  }
+  @include media.tl {
+    width: 91px;
+  }
+  @include media.d {
+    width: 87px;
+    left: 73%;
+  }
+  @include media.ds {
+    justify-content: flex-start;
+    position: absolute;
+    width: 123px;
+    top: 0;
+    left: 67%;
+    animation: renderImageLeft 0.7s;
+  }
+  @include media.dhd {
+    justify-content: flex-start;
+    position: absolute;
+    left: 70%;
+    width: 146px;
+  }
+}
+
+@keyframes renderImageLeft {
+  0% {
+    transform: scale(0);
+    transform-origin: bottom left;
+  }
+  25% {
+    transform: scale(0);
+    transform-origin: bottom left;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: bottom left;
+  }
+}
+
+@keyframes renderImageRight {
+  0% {
+    transform: scale(0);
+    transform-origin: bottom right;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: bottom right;
+  }
+}
+
+@keyframes renderText {
+  from {
+    left: -5%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+

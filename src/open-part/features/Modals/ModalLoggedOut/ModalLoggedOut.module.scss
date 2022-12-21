@@ -1,0 +1,38 @@
+@use "src/styles/color";
+
+.wrap {
+  width: 100%;
+  background: color.$grayscale100;
+  z-index: 21;
+  padding-bottom: 35px;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 15px;
+  margin-bottom: 56px;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 49px;
+  text-align: center;
+}
+
+.item {
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon_wrap {
+  cursor: pointer;
+}

@@ -1,0 +1,47 @@
+@use "src/styles/media";
+@use "src/styles/color";
+
+
+.wrap {
+}
+
+.inner {
+  padding: 20px 16px;
+  background: color.$white;
+  border-radius: 20px;
+  @include media.tp {
+    border-radius: 26px;
+    padding: 36px 120px ;
+  }
+  @include media.d {
+    padding: 40px 58px;
+  }
+  @include media.dhd {
+    padding: 48px 120px ;
+  }
+}
+
+ .button_wrap {
+    justify-content: flex-end;
+    display: flex;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: color.$white;
+    padding: 16px 20px;
+    justify-content: center;
+    margin-top: 30px;
+    @include media.tp {
+      background: transparent;
+      padding: 0;
+      position: relative;
+      width: 100%;
+      justify-content: flex-end;
+      display: flex;
+      margin-top: 20px;
+    }
+    @include media.dhd {
+      margin-top: 24px;
+    }
+ }

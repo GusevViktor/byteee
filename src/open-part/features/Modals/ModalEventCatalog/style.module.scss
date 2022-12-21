@@ -1,0 +1,46 @@
+@use "src/styles/color";
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.cross_icon {
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 276px;
+  box-sizing: border-box;
+  left: calc(50% - 152px);
+  z-index: 21;
+  background: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  width: 304px;
+  padding: 24px;
+  :last-child {
+    border-bottom: none;
+  }
+
+  button {
+    display: flex;
+    height: 64px;
+    width: 100%;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border-bottom: 1px solid color.$grayscale100;
+    cursor: pointer;
+    > span {
+      color: color.$grayscale900;
+    }
+  }
+}

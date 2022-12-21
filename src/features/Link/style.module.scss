@@ -1,0 +1,12 @@
+.wrap {
+  display: inline-block;
+  a {
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    ::active {
+      text-decoration: none;
+    }
+  }
+}

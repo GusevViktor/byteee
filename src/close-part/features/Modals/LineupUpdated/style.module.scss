@@ -1,0 +1,100 @@
+@use 'src/styles/media';
+
+.description {
+  margin-top: 8px;
+  margin-bottom: 12px;
+  @include media.tp {
+    margin-top: 20px;
+    margin-bottom: 28px;
+  }
+}
+
+.item {
+  margin-bottom: 20px;
+  @include media.tp {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+}
+
+.item__last {
+  margin-bottom: 24px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  button {
+    width: 100%;
+  }
+  @include media.tp {
+    button {
+      width: 244px;
+    }
+    flex-direction: row-reverse;
+  }
+}
+
+.button_ok {
+  margin-bottom: 8px;
+  width: 100%;
+  button {
+    width: 100%;
+  }
+  @include media.tp {
+    button {
+      width: 244px;
+    }
+    width: auto;
+    margin-left: 8px;
+    margin-bottom: 0;
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.info_speaker {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  @include media.tp {
+    align-items: flex-start;
+    flex-direction: column;
+    width: 312px;
+  }
+}
+
+.session_and_time {
+  display: flex;
+  width: 230px;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  @include media.tp {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+.number_session {
+  @include media.tp {
+    margin-right: 108px;
+  }
+}
+
+.name_style {
+  margin-left: 8px;
+}
+
+.modal {
+  width: 100%;
+  padding: 24px;
+  @include media.tp {
+    width: 625px;
+    padding: 64px;
+  }
+}

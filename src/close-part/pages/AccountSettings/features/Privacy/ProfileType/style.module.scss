@@ -1,0 +1,43 @@
+@use 'src/styles/color';
+@use 'src/styles/media';
+.wrap input[type="radio"] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.wrap {
+  cursor: pointer;
+  width: 100%;
+  @include media.tp {
+    flex-basis: 50%;
+  }
+}
+.card {
+  box-sizing: border-box;
+  width: 100%;
+  background: color.$grayscale100;
+  border: 1px solid color.$grayscale200;
+  border-radius: 16px;
+  padding: 16px 24px;
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100px;
+}
+input[type="radio"]:checked + .card{
+  width: 100%;
+  background: color.$violet800;
+  border-radius: 16px;
+  padding: 16px 24px;
+  display: flex;
+  gap: 4px;
+  border: none;
+  flex-direction: column;
+}
+input[type="radio"]:checked + .card p{
+  color: white;
+}

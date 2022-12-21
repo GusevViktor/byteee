@@ -1,0 +1,35 @@
+@use 'src/styles/media';
+
+.wrap{
+  @include media.tp{
+    width: 460px;
+  }
+}
+.title {
+  margin-bottom: 8px;
+  @include media.tp {
+    margin-bottom: 20px;
+  }
+}
+.description {
+  margin-bottom: 24px;
+}
+.buttons{
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+  @include media.tp{
+  flex-direction: row;
+  }
+}
+.buttons button{
+  width: 100%;
+  @include media.tp {
+    flex-basis: 162px;
+  }
+}
+.buttons:last-child button{
+  padding: 16px 28px;
+}
+
+

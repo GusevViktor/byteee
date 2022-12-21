@@ -1,0 +1,49 @@
+@use "src/styles/grid";
+@use "src/styles/media";
+@use "src/styles/color";
+
+.grid_left {
+ grid-area: auto / 1 / auto / 5;
+ @include media.tp{
+  grid-area: auto / 1 / auto / 7;
+ }
+ @include media.tl{
+  grid-area: auto / 1 / auto / 13;
+ }
+ @include media.d{
+  grid-area: auto / 1 / auto / 3;
+ }
+}
+.grid_center {
+ grid-area: auto / 1 / auto / 5;
+ @include media.tp{
+  grid-area: auto / 1 / auto / 7;
+ }
+ @include media.tl{
+  grid-area: auto / 1 / auto / 13;
+ }
+ @include media.d{
+  grid-area: auto / 3 / auto / 10;
+ }
+}
+.grid_right {
+ display: none;
+ @include media.d {
+  display: block;
+  position: sticky;
+  top: 0;
+  align-self: start;
+  grid-area: auto / 10 / auto / 13;
+ }
+}
+.navigation_wrap {
+ background: white;
+ border-radius: 20px;
+ padding: 25px 50px 0 50px;
+ white-space:nowrap;
+ margin-bottom: 8px;
+ margin-top: 16px;
+ @include media.d{
+  margin-top: unset;
+ }
+}

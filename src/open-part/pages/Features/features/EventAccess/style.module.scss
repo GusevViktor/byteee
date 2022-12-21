@@ -1,0 +1,235 @@
+@use "src/styles/media";
+@use "src/styles/grid";
+@use "src/styles/color";
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 72px;
+  color: color.$grayscale900;
+  box-sizing: border-box;
+  @include grid.All;
+  @include media.d{
+    padding: 0 116px;
+    flex-direction: row-reverse;
+  }
+  @include media.dhd{
+    padding: 0;
+    align-items: center;
+  }
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  grid-area: auto / 1 / auto / 5;
+  align-items: center;
+  @include media.tp {
+    flex-direction: row;
+    justify-content: center;
+    grid-area: auto / 1 / auto / 7;
+    height: 362px;
+    gap: 8px;
+  }
+  @include media.tl {
+    grid-area: auto / 2 / auto / 12;
+    height: 362px;
+    gap: 8px;
+  }
+  @include media.d{
+    grid-area: 5 / 2 / 6/ 8;
+    height: unset;
+  }
+  @include media.dhd {
+    height: 473px;
+    max-width: 460px;
+  }
+}
+
+.imagePublic {
+  width: 100%;
+  height: 100%;
+  max-width: 280px;
+  @include media.tp {
+    max-width: 352px;
+  }
+  @include media.tl {
+    max-width: 400px;
+  }
+  @include media.d {
+    max-width: unset;
+    width: 320px;
+    height: 320px;
+  }
+  @include media.ds {
+    width: 340px;
+    height: 340px;
+  }
+  @include media.dhd {
+    width: 460px;
+    height: 460px;
+    aspect-ratio: 1/1;
+  }
+}
+
+.imagePrivate {
+  height: 100%;
+  width: 100%;
+  max-width: 280px;
+  @include media.tp {
+    max-width: 352px;
+  }
+  @include media.tl {
+    max-width: 400px;
+  }
+  @include media.d {
+    max-width: unset;
+    width: 320px;
+    height: 320px;
+  }
+  @include media.ds {
+    width: 340px;
+    height: 340px;
+  }
+  @include media.dhd {
+    width: 460px;
+    height: 460px;
+    aspect-ratio: 1/1;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 44px 48px;
+  position: relative;
+}
+
+.square {
+  background: color.$white;
+  border-radius: 26px;
+  margin-bottom: 8px;
+  @include media.d {
+    border-radius: 41px;
+  }
+}
+
+.substract {
+  background: color.$white;
+  border-radius: 50% 50% 50% 26px;
+  @include media.tp {
+    margin-bottom: 0;
+  }
+  @include media.d {
+    //aspect-ratio: 1/1;
+    border-radius: 50% 50% 50% 41px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 44px 48px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  @include media.tp {
+    box-sizing: border-box;
+    height: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 68px 72px;
+  }
+  @include media.tl {
+    padding: 90px 92px;
+  }
+  @include media.d{
+    padding: 66px 55px;
+  }
+  @include media.ds{
+    padding: 66px;
+  }
+  @include media.dhd{
+    padding: 126px;
+    height: unset;
+  }
+}
+
+.text {
+  width: 100%;
+  box-sizing: border-box;
+  grid-area: auto / 1 / auto / 5;
+  margin-bottom: 28px;
+  @include media.ml {
+    margin-bottom: 32px;
+    width: unset;
+  }
+
+  @include media.tp {
+    grid-area: auto / 2 / auto / 6;
+  }
+  @include media.tl {
+    grid-area: auto / 2 / auto / 12;
+  }
+  @include media.d {
+    grid-area: auto / 9 / auto / 12;
+    margin-bottom: unset;
+    padding: 0;
+  }
+  @include media.dhd {
+    grid-area: auto / 9 / auto / 11;
+  }
+}
+
+.text p {
+  @include media.d {
+    margin-bottom: 0;
+  }
+}
+
+.paragraph{
+  width: 100%;
+  max-width: 472px;
+  @include media.tl{
+    max-width: 806px;
+  }
+}
+.paragraph p:first-child{
+  margin-bottom: 24px;
+}
+
+.paragraph.center {
+  text-align: center;
+}
+
+.heading {
+  width: 100%;
+  margin-bottom: 16px;
+  @include media.tp{
+    font-size: 28px;
+    line-height: 39px;
+  }
+  @include media.d{
+    margin-bottom: 28px;
+    font-size: 38px;
+    line-height: 51px;
+  }
+  @include media.dhd{
+    font-size: 51px;
+    line-height: 66px;
+  }
+}

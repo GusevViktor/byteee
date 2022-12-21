@@ -1,0 +1,127 @@
+@use "src/styles/media";
+@use "src/styles/grid";
+@use "src/styles/color";
+
+.description {
+  color: color.$grayscale700;
+  margin-right: 24px;
+}
+
+.modal {
+  position: fixed;
+  top: 276px;
+  box-sizing: border-box;
+  left: calc(50% - 152px);
+  z-index: 21;
+  background: color.$white;
+  border-radius: 20px;
+  width: 304px;
+  padding: 24px;
+  :last-child {
+    border-bottom: none;
+  }
+
+  button {
+    display: flex;
+    height: 64px;
+    width: 100%;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border-bottom: 1px solid color.$grayscale100;
+    cursor: pointer;
+    > span {
+      color: color.$grayscale900;
+    }
+  }
+}
+
+.sort_mobile {
+  display: flex;
+  button {
+    margin: 0;
+    padding: 0;
+    height: auto;
+  }
+  @include media.tp {
+    display: none;
+  }
+}
+
+.sort_tablet {
+  display: none;
+  @include media.tp {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.select {
+  position: relative;
+  width: 156px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: color.$white;
+  border: 1px solid color.$grayscale600;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.select__open {
+  border: 1px solid color.$violet300;
+}
+
+.select_modal {
+  position: absolute;
+  top: 106%;
+  left: -1px;
+  padding: 12px 0;
+  background: color.$white;
+  border: 1px solid color.$grayscale200;
+  box-shadow: 0px 4px 13px -5px rgba(189, 189, 189, 0.5),
+    0px 1px 1px rgba(242, 242, 242, 0.5);
+  border-radius: 12px;
+  width: 156px;
+  z-index: 10;
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.button {
+  display: flex;
+  height: 32px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  align-items: center;
+  border: none;
+  margin: 0;
+  padding: 0 16px;
+  background: transparent;
+  margin-bottom: 4px;
+  cursor: pointer;
+  > span {
+    color: color.$grayscale900;
+  }
+}
+
+.button__check {
+  background: color.$violet100;
+}
+
+.arrow_icon {
+  position: absolute;
+  top: calc(50% - 10px);
+  right: 14px;
+}
+
+.arrow_icon__open {
+  transform: rotate(180deg);
+}

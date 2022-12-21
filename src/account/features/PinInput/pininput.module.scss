@@ -1,0 +1,45 @@
+@use "src/styles/color";
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: center;
+}
+.digit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  width: 48px;
+  height: 56px;
+  border: 2px solid color.$grayscale300;
+  border-radius: 12px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+.container input:hover {
+  border: 1px solid color.$violet300;
+}
+input:focus {
+  border: 1px solid color.$violet300;
+}
+.container:active input {
+  border: 1px solid color.$violet300;
+}
+.digit .error {
+  border: 1px solid color.$red;
+}
+
+.textError {
+  color: color.$red;
+  font-family: "Inter", sans-serif;
+  word-wrap: break-word;
+  max-width: 279px;
+  font-size: 13px;
+  line-height: 19px;
+}

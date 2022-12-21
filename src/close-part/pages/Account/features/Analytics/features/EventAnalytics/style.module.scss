@@ -1,0 +1,73 @@
+@use "src/styles/grid";
+@use "src/styles/media";
+@use "src/styles/color";
+
+.wrap {
+  background-color: color.$white;
+  padding: 20px 16px;
+  border-radius: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @include media.tp() {
+    flex-shrink: 3;
+    padding: 28px 20px;
+  }
+  @include media.d() {
+    padding: 33px 20px;
+  }
+  @include media.dhd() {
+    padding: 36px 28px;
+  }
+}
+.activities {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+.activity {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 23px;
+
+}
+.activity:last-child {
+  margin-bottom: 0;
+}
+.icon {
+  background-color: color.$tangerine100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:16px;
+  border-radius: 12px;
+}
+
+.text {
+  padding-left: 16px;
+}
+.title {
+  margin-bottom: 8px;
+  @include media.tp() {
+    margin-bottom: 12px;
+  }
+  @include media.d() {
+    margin-bottom: 20px;
+  }
+  @include media.dhd() {
+    margin-bottom: 24px;
+  }
+}
+.select {
+  margin-bottom: 20px;
+  @include media.tp() {
+    margin-bottom: 16px;
+  }
+  @include media.d() {
+    margin-bottom: 12px;
+  }
+  @include media.dhd() {
+    margin-bottom: 24px;
+  }
+}

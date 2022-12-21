@@ -1,0 +1,35 @@
+@use "src/styles/media";
+@use "src/styles/color";
+
+.line{
+  height: 4px;
+  width: 100%;
+  background: #FFFFFF;
+  margin-top: 20px;
+  @include media.tp{
+    margin-top: 28px;
+  }
+}
+.mintLine{
+  background: color.$mint500;
+}
+.stepper{
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding-right: 8px;
+  @include media.tp{
+    padding: 0 120px;
+  }
+  @include media.d{
+    padding: 0 116px;
+  }
+  @include media.dhd{
+    padding: 0 116px;
+  }
+}
+
+.line:last-child{
+  display: none;
+}

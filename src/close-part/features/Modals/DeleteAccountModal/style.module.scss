@@ -1,0 +1,23 @@
+@use 'src/styles/media';
+
+.title {
+  margin-bottom: 8px;
+  @include media.tp {
+    margin-bottom: 20px;
+  }
+}
+
+.attention {
+  margin-bottom: 24px;
+}
+.buttons button{
+  width: 100%;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  @include media.tp{
+    flex-direction: row-reverse;
+  }
+}

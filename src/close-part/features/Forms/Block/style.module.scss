@@ -1,0 +1,8 @@
+@use "src/styles/media";
+
+.block {
+  margin-bottom: 20px;
+  @include media.tp {
+    margin-bottom: 24px;
+  }
+}

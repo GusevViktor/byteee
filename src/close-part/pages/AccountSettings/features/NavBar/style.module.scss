@@ -1,0 +1,24 @@
+@use 'src/styles/color';
+@use 'src/styles/media';
+.wrap {
+  background: white;
+  position: relative;
+  border-radius: 20px;
+  padding: 20px 16px 28px 16px;
+  @include media.tp{
+    padding: 36px 120px 36px 120px;
+    border-radius: 26px;
+  }
+  @include media.d{
+    padding: 40px 30px;
+  }
+}
+.wrap h2 {
+  margin-bottom: 16px;
+  @include media.tp{
+    margin-bottom: 32px;
+  }
+  @include media.d{
+    display: none;
+  }
+}

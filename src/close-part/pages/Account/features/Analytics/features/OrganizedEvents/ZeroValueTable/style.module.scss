@@ -1,0 +1,91 @@
+@use "src/styles/media";
+@use "src/styles/color";
+
+.wrap {
+  width: 100%;
+  background-color: color.$grayscale100;
+  border: 2px dashed #DBDBDB;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 16px 44px 16px;
+  @include media.tp() {
+    border-radius: 20px;
+    flex-direction: row;
+    padding: 49px 80px 44px 64px;
+  }
+  @include media.d() {
+    border-radius: 26px;
+    padding: 40px 75px 33px 82px;
+  }
+  @include media.dhd() {
+    border-radius: 26px;
+    padding: 71px 113px 74px 117px;
+  }
+}
+.content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 44px;
+  width: 100%;
+  @include media.tp() {
+    align-items: flex-start;
+    margin-bottom: unset;
+    justify-content: space-around
+  }
+
+}
+.title {
+  padding-bottom: 8px;
+  width: 100%;
+  text-align: left;
+  @include media.tp() {
+    padding-bottom: 12px;
+  }
+}
+
+.subtitle {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 16px;
+  @include media.tp() {
+    margin-bottom: unset;
+  }
+}
+.button {
+  width: 100%;
+  @include media.tp() {
+    width: unset;
+  }
+}
+.button button {
+  width: 100%;
+  @include media.tp() {
+    width: unset;
+  }
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img img {
+  background-color: color.$white;
+  border-radius: 50%;
+  width: 170px;
+  @include media.tp() {
+    width: 180px;
+  }
+  @include media.d() {
+    width: 200px;
+  }
+  @include media.dhd() {
+    width: 250px;
+  }
+}

@@ -1,0 +1,85 @@
+@use "src/styles/grid";
+@use "src/styles/media";
+@use "src/styles/color";
+
+.wrap {
+  background-color: color.$white;
+  padding: 20px 16px;
+  border-radius: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @include media.tp() {
+    padding: 28px 20px;
+    flex-shrink: 2;
+  }
+  @include media.d() {
+    padding: 32px 20px;
+  }
+  @include media.dhd() {
+    padding: 36px 28px;
+  }
+}
+
+.title {
+  margin-bottom: 20px;
+  order: 1;
+}
+.yAxes {
+  max-width: 80px;
+  order: 2
+}
+.graph {
+  width: 100%;
+  min-height: 150px;
+  order: 2;
+  @include media.tp{
+    justify-self: end;
+    align-self: end;
+   }
+}
+
+.roles {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  @include media.tp{
+    order: 1;
+    margin-top: unset;
+    margin-bottom: 24px;
+    justify-self: end;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 25px;
+   }
+   @include media.d{
+    padding-right: 75px;
+   }
+}
+
+
+.role {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 24px;
+  @include media.tp{
+    margin-bottom: unset;
+   }
+}
+.role > div {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-left: 4px;
+}
+.tangerine_circle {
+  background-color: color.$tangerine600;
+}
+.blue_circle {
+  background-color: color.$blue400;
+}
+.red_circle {
+  background-color: color.$red500;
+}

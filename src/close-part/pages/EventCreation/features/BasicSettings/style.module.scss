@@ -1,0 +1,31 @@
+@use "src/styles/media";
+@use "src/styles/color";
+
+.wrap {
+  background: white;
+  border-radius: 26px;
+  padding: 20px 16px;
+  margin: 20px 0;
+  @include media.tp {
+    padding: 36px 120px;
+  }
+  @include media.d {
+    padding: 40px 116px;
+  }
+  @include media.dhd {
+    padding: 48px 116px;
+  }
+}
+
+.button {
+  width: 100%;
+  button {
+    width: 100%;
+  }
+  @include media.tp {
+    button {
+      width: auto;
+      margin-left: auto;
+    }
+  }
+}

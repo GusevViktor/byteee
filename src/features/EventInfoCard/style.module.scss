@@ -1,0 +1,44 @@
+@use "../../styles/media";
+@use "../../styles/color";
+@use "../../styles/paddingBlocks";
+@use "../../styles/brBlocks";
+
+.title {
+  margin-bottom: 8px;
+  @include media.dhd {
+    margin-bottom: 16px;
+  }
+}
+
+.description {
+  margin-bottom: 24px;
+  @include media.d {
+    margin-bottom: 32px;
+  }
+}
+
+.wrap {
+  @include paddingBlocks.padding();
+  @include brBlocks.borderRadius();
+  background: color.$white;
+  margin-bottom: 8px;
+}
+
+.speaker {
+  display: inline-flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  flex-basis: 50%;
+  cursor: pointer;
+}
+
+.speakersWrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 12px;
+  @include media.ml {
+    flex-direction: row;
+  }
+}
